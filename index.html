@@ -6,119 +6,209 @@
 <title>Textos26</title>
 
 <style>
+:root{
+    --fons:#f3eee6;
+    --paper:#fffaf2;
+    --text:#2e2a26;
+    --suau:#8b7d6b;
+    --linia:#d8cbbc;
+}
 
 body{
     margin:0;
-    background:#f4efe7;
-    color:#2d2d2d;
-    font-family: Georgia, serif;
+    background:var(--fons);
+    color:var(--text);
+    font-family: Georgia, "Times New Roman", serif;
     line-height:1.8;
 }
 
 header{
-    height:100vh;
+    min-height:70vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:30px;
+    padding:40px 24px;
 }
 
-h1{
-    font-size:4.5rem;
+.marca{
+    font-size:clamp(3.5rem, 9vw, 7rem);
+    letter-spacing:6px;
     margin:0;
-    letter-spacing:4px;
+    font-weight:700;
 }
 
-.sub{
-    font-size:1.3rem;
-    max-width:700px;
-    margin-top:20px;
+.simbol{
+    margin:22px 0;
+    color:var(--suau);
+    font-size:1.4rem;
 }
 
-.frase{
-    margin-top:40px;
-    font-style:italic;
-    opacity:0.7;
+.subtitol{
+    max-width:680px;
+    font-size:1.35rem;
+    color:#3d3832;
 }
 
-section{
-    max-width:850px;
+nav{
+    margin-top:34px;
+}
+
+nav a{
+    margin:0 12px;
+    color:var(--text);
+    text-decoration:none;
+    border-bottom:1px solid var(--linia);
+    padding-bottom:4px;
+}
+
+main{
+    max-width:900px;
     margin:auto;
-    padding:80px 30px;
+    padding:30px 24px 90px;
 }
 
-.text{
-    margin-bottom:100px;
+.intro{
+    background:var(--paper);
+    border:1px solid var(--linia);
+    padding:34px;
+    margin-bottom:50px;
+}
+
+.intro p{
+    margin:0;
+    font-size:1.15rem;
 }
 
 h2{
     font-size:2rem;
-    margin-bottom:20px;
+    margin-bottom:30px;
 }
 
-p{
-    font-size:1.2rem;
+.targeta{
+    background:var(--paper);
+    border:1px solid var(--linia);
+    padding:30px;
+    margin-bottom:24px;
+    transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.targeta:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.targeta h3{
+    margin-top:0;
+    font-size:1.6rem;
+    letter-spacing:1px;
+}
+
+.data{
+    color:var(--suau);
+    font-size:.95rem;
+    margin-bottom:16px;
+}
+
+.targeta p{
+    font-size:1.1rem;
+}
+
+.boto{
+    display:inline-block;
+    margin-top:12px;
+    color:var(--text);
+    text-decoration:none;
+    border-bottom:1px solid var(--text);
+}
+
+#sobre{
+    margin-top:80px;
+    padding-top:40px;
+    border-top:1px solid var(--linia);
 }
 
 footer{
     text-align:center;
-    padding:50px;
-    opacity:0.5;
-    font-size:0.9rem;
+    padding:40px 20px;
+    color:var(--suau);
+    font-size:.9rem;
 }
 
+@media(max-width:600px){
+    .marca{
+        letter-spacing:2px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:8px;
+    }
+
+    .intro,
+    .targeta{
+        padding:24px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
+    <h1 class="marca">Textos26</h1>
+    <div class="simbol">❦</div>
+    <div class="subtitol">
+        Un lloc per llegir sense pressa.
+    </div>
 
-<h1>Textos26</h1>
-
-<div class="sub">
-Fragments de vida, emocions i paraules
-que s’aturen una estona sobre la taula.
-</div>
-
-<div class="frase">
-“No tot el que importa fa soroll.”
-</div>
-
+    <nav>
+        <a href="#textos">Textos</a>
+        <a href="#sobre">Sobre aquest espai</a>
+    </nav>
 </header>
 
-<section>
+<main>
 
-<div class="text">
+<section class="intro">
+    <p>
+        A la meva taula hi ha textos escrits al llarg dels anys:
+        records, emocions, petites històries i paraules que han volgut quedar-se una estona més.
+    </p>
+</section>
 
-<h2>La tassa</h2>
+<section id="textos">
+    <h2>Textos</h2>
 
-<p>
-Encara hi havia una mica de cafè fred al fons.
-La conversa havia acabat feia estona,
-però la tassa continuava allà,
-com si també necessités pair algunes coses.
-</p>
-
-</div>
-
-<div class="text">
-
-<h2>La finestra</h2>
-
-<p>
-Hi ha finestres que només serveixen per mirar fora.
-I n’hi ha d’altres que et fan mirar endins.
-</p>
-
-</div>
+    <article class="targeta">
+        <h3>Després de Sant Jordi</h3>
+        <div class="data">23 d’abril de 2018</div>
+        <p>
+            Una història sobre el pas del temps, els fills que creixen
+            i els castells que, de vegades, es queden massa silenciosos.
+        </p>
+        <a class="boto" href="textos/despres-de-sant-jordi.html">Llegir el text</a>
+    </article>
 
 </section>
 
+<section id="sobre">
+    <h2>Sobre aquest espai</h2>
+    <p>
+        Textos26 recull textos personals, escrits sense pressa i sense una altra pretensió
+        que compartir una mirada, una emoció o un record.
+    </p>
+    <p>
+        Alguns textos neixen d’una data concreta. Altres, d’una conversa, d’una absència
+        o d’una imatge que es queda voltant pel cap.
+    </p>
+</section>
+
+</main>
+
 <footer>
-© Textos26
+    © Textos26 · Textos originals de Joan
 </footer>
 
 </body>
