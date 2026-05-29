@@ -12,6 +12,9 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gobo26.github.io/Textos26/">
 <meta property="og:locale" content="ca_ES">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Barlow+Condensed:wght@700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
     --fons:#f2eadf;
@@ -34,7 +37,7 @@ body{
         radial-gradient(circle at 88% 18%, rgba(73,107,98,.13), transparent 30%),
         linear-gradient(135deg,#f8f0e6,#eadfce);
     color:var(--text);
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:'Lora', Georgia, "Times New Roman", serif;
     line-height:1.8;
 }
 body::before{
@@ -69,8 +72,9 @@ body::before{
     background:linear-gradient(90deg,transparent,var(--linia),transparent);
 }
 .marca{
+    font-family:'Caveat', cursive;
     font-size:clamp(3.4rem, 9vw, 7rem);
-    letter-spacing:.08em;
+    letter-spacing:0;
     margin:0;
     font-weight:700;
     line-height:1;
@@ -94,6 +98,8 @@ nav{
     justify-content:center;
 }
 nav a{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700;
     color:var(--text);
     text-decoration:none;
     border:1px solid rgba(111,79,55,.24);
@@ -139,13 +145,19 @@ main{
     margin-bottom:1.4rem;
 }
 h2{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:900;
+    letter-spacing:.06em;
+    text-transform:uppercase;
     font-size:2rem;
     margin:0;
     line-height:1.1;
 }
 .apunt{
+    font-family:'Caveat', cursive;
+    font-weight:700;
     color:var(--suau);
-    font-size:.92rem;
+    font-size:1.25rem;
     font-style:italic;
 }
 .grid-textos{
@@ -181,6 +193,9 @@ h2{
     outline:none;
 }
 .targeta h3{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:900;
+    text-transform:uppercase;
     margin:0 0 .25rem;
     font-size:1.6rem;
     letter-spacing:.02em;
@@ -249,9 +264,10 @@ footer a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(125,109
     <div class="subtitol">Textos, emocions i fragments de vida per llegir sense pressa.</div>
 
     <nav aria-label="Navegació principal">
-        <a href="#textos">Textos</a>
-        <a href="#sobre">Sobre aquest espai</a>
         <a href="https://gobo26.github.io/gobo26/">Gobo26</a>
+        <a href="https://gobo26.github.io/Taller_de_lletres/">Taller</a>
+        <a href="#" aria-current="page">Textos26</a>
+        <a href="#textos">Textos</a>
     </nav>
 </header>
 
@@ -298,7 +314,7 @@ footer a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(125,109
 </main>
 
 <footer>
-    © Textos26 · Textos originals de Joan · <a href="https://gobo26.github.io/gobo26/">Gobo26</a>
+    © Textos26 · Textos originals de Joan · <a href="https://gobo26.github.io/gobo26/">Gobo26</a> · <a href="https://gobo26.github.io/Taller_de_lletres/">Taller de Lletres</a>
 </footer>
 
 </body>

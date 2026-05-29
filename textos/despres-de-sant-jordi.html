@@ -12,6 +12,9 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gobo26.github.io/Textos26/textos/despres-de-sant-jordi.html">
 <meta property="og:locale" content="ca_ES">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Barlow+Condensed:wght@700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
     --fons:#f4efe7;
@@ -30,7 +33,7 @@ body{
         radial-gradient(circle at 14% 10%, rgba(143,77,66,.12), transparent 30%),
         linear-gradient(135deg,#f8f0e6,#ede2d2);
     color:var(--text);
-    font-family:Georgia,"Times New Roman",serif;
+    font-family:'Lora', Georgia, "Times New Roman", serif;
     line-height:1.9;
 }
 body::before{
@@ -56,6 +59,25 @@ body::before{
     font-size:.92rem;
 }
 .tornar-top:hover,.tornar-top:focus-visible{color:var(--accent);outline:none;}
+.espais{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:34px;
+}
+.espais a{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--text);
+    text-decoration:none;
+    border:1px solid rgba(111,79,55,.24);
+    background:rgba(255,250,242,.42);
+    padding:.35rem .78rem;
+    font-size:.78rem;
+}
+.espais a:hover,.espais a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none;}
 article{
     max-width:860px;
     margin:0 auto 70px;
@@ -74,11 +96,13 @@ article::before{
     font-size:1.5rem;
 }
 h1{
+    font-family:'Caveat', cursive;
+    font-weight:700;
     font-size:clamp(2.3rem,6vw,4rem);
     line-height:1.05;
     margin:0 0 .7rem;
-    letter-spacing:.035em;
-    text-transform:uppercase;
+    letter-spacing:0;
+    text-transform:none;
 }
 .meta{
     color:var(--suau);
@@ -142,6 +166,11 @@ h1{
 
 <header class="cap">
     <a class="tornar-top" href="../index.html">← Tornar a Textos26</a>
+    <nav class="espais" aria-label="Altres espais de Gobo26">
+        <a href="https://gobo26.github.io/gobo26/">Gobo26</a>
+        <a href="https://gobo26.github.io/Taller_de_lletres/">Taller</a>
+        <a href="../index.html" aria-current="page">Textos26</a>
+    </nav>
 </header>
 
 <article>
@@ -177,6 +206,7 @@ h1{
     <div class="peu-text">
         <span>Textos26 · Text original de Joan</span>
         <a href="../index.html">Tornar al quadern</a>
+        <a href="https://gobo26.github.io/Taller_de_lletres/">Taller de Lletres</a>
     </div>
 </article>
 
